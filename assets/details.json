@@ -1,0 +1,14 @@
+{
+    "total_ips_per_list": {
+        "firehol_level1": 4350,
+        "firehol_level2": 15914,
+        "firehol_level3": 12241,
+        "firehol_anonymous": 1212944,
+        "firehol_webclient": 1447,
+        "firehol_abusers_30d": 196680,
+        "firehol_abusers_1d": 7467,
+        "firehol_webserver": 689
+    },
+    "total_unique_ips": 1429639,
+    "last_updated": "2025-04-22T09:49:18.375515Z"
+}
