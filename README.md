@@ -1,10 +1,14 @@
-# Cybersight Security Global Threat Map
+<div align="center">
+
+# Global Threat Map
 
 ![Cybersight Security Global Threat Map](assets/logo.png)
 
 The Cybersight Security Global Threat Map is an interactive visualization tool that displays potential cybersecurity threats around the world using real IP data from FireHOL threat intelligence feeds. The map provides security professionals and the general public with a compelling visualization of global cyber threat activity.
 
-**Key Features:**
+</div>
+
+## Features:
 - Displays real IP addresses from multiple FireHOL threat intelligence lists
 - Shows geolocation data for each threat (when available)
 - Visualizes simulated attack patterns between threat sources
