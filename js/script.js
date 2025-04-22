@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Use ip-api batch request (free tier allows up to 100 IPs per request)
             // Documentation: https://ip-api.com/docs/api:batch
-            const requestUrl = 'https://thingproxy.freeboard.io/fetch/http://ip-api.com/batch';
+            const requestUrl = 'http://ip-api.com/batch';
             const requestData = ipAddresses.map(ip => ({
                 query: ip,
                 fields: 'status,query,country,city,lat,lon,isp'
