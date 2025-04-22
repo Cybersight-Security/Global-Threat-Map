@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersight Security Threat Map</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="map"></div>
+      <div id="logo-container">
+        <img src="assets/logo.png" alt="Security Firm Logo" id="logo">
+      </div>
+      <div id="footer">
+        <div id="threat-info">
+          <div id="threat-stats">
+            <div class="stat">
+              <span>Threats Detected:</span>
+              <span id="total-count">0</span>
+            </div>
+            <div class="stat">
+              <span>Active Sources:</span>
+              <span id="active-sources">0</span>
+            </div>
+            <div class="stat">
+              <span>Total IPs:</span>
+              <span id="total-ips">0</span>
+            </div>
+          </div>
+          <div id="dataset-selector">
+            <select id="dataset-select">
+              <option value="all_threats.json" title="Shows threats from all lists with color-coded categories">All Threats</option>
+              <option value="firehol_level1.json" title="Contains IPs identified as the most significant and frequent sources of malicious or abusive activity">High Risk Threats</option>
+              <option value="firehol_level2.json" title="Contains IPs with a moderate risk level of performing malicious actions">Moderate Risk Threats</option>
+              <option value="firehol_level3.json" title="Contains IPs associated with lower levels of risk, including potential nuisance activities">Low Risk Threats</option>
+              <option value="firehol_anonymous.json" title="Identifies IP addresses associated with anonymous proxies and VPN services">Anonymous Proxies</option>
+              <option value="firehol_webclient.json" title="Lists IPs associated with web clients used for scraping or spamming">Malicious Web Clients</option>
+              <option value="firehol_abusers_30d.json" title="Contains IPs flagged for malicious activities over the past 30 days">30-Day Abusers</option>
+              <option value="firehol_abusers_1d.json" title="Contains IPs flagged for malicious activities in the past 24 hours">24-Hour Abusers</option>
+              <option value="firehol_webserver.json" title="Identifies IPs linked to malicious actions targeting web servers">Web Server Threats</option>
+            </select>
+          </div>
+        </div>
+        <div id="activity-feed">
+          <div id="activity-feed-header">Active Threats</div>
+          <div id="activity-feed-content"></div>
+        </div>
+      </div>
+      <div class="tooltip" id="tooltip"></div>
+      <div id="loading">
+        <img src="assets/badge.png" alt="Loading" class="loading-logo">
+        <div class="loading-text">Analyzing Threats</div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
