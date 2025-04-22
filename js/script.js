@@ -21,11 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentDataset = 'all_threats.json'; // Set default to all threats
 
     // Load details from details.json
-    fetch('assets/details.json')
+    fetch('https://raw.githubusercontent.com/Cybersight-Security/Global-Threat-Map/refs/heads/main/assets/details.json')
         .then(response => response.json())
         .then(data => {
             document.getElementById('total-ips').textContent = data.total_unique_ips.toLocaleString();
-            document.getElementById('last-updated').textContent = new Date(data.last_updated).toLocaleString();
 
             // Update stats with dataset-specific counts
             for (const [dataset, count] of Object.entries(data.total_ips_per_list)) {
@@ -235,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 startAttackAnimation();
 
             } else {
-                const response = await fetch(`data/${datasetFile}`);
+                const response = await fetch(`https://raw.githubusercontent.com/Cybersight-Security/Global-Threat-Map/refs/heads/main/data/${datasetFile}`);
                 const data = await response.json();
 
                 // Initialize the API queue with all IPs
@@ -291,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (const dataset of datasets) {
             try {
-                const response = await fetch(`data/${dataset}`);
+                const response = await fetch(`https://raw.githubusercontent.com/Cybersight-Security/Global-Threat-Map/refs/heads/main/data/${dataset}`);
                 const data = await response.json();
                 allDatasets[dataset] = data;
             } catch (error) {
