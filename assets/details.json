@@ -1,14 +1,14 @@
 {
     "total_ips_per_list": {
-        "firehol_level1": 4482,
-        "firehol_level2": 15179,
-        "firehol_level3": 13269,
-        "firehol_anonymous": 1257994,
-        "firehol_webclient": 117,
-        "firehol_abusers_30d": 201403,
-        "firehol_abusers_1d": 5564,
-        "firehol_webserver": 646
+        "firehol_level1": 4416,
+        "firehol_level2": 22071,
+        "firehol_level3": 14311,
+        "firehol_anonymous": 2070845,
+        "firehol_webclient": 288,
+        "firehol_abusers_30d": 161615,
+        "firehol_abusers_1d": 7702,
+        "firehol_webserver": 987
     },
-    "total_unique_ips": 1479404,
-    "last_updated": "2025-06-30T08:36:49.007674Z"
+    "total_unique_ips": 2269380,
+    "last_updated": "2026-04-01T23:37:20.431252Z"
 }
